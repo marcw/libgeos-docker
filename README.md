@@ -9,7 +9,7 @@ FROM ghcr.io/marcw/libgeos-docker:latest-debian-bookworm AS libgeos
 
 FROM ruby:3.4.5-slim-bookworm
 
-COPY --from=libgeos /usr/local/ /usr/local/
+COPY --from=libgeos /usr/local/lib/libgeos* /usr/local/
 ```
 
 ## LICENSE
