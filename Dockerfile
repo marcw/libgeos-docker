@@ -3,6 +3,8 @@ ARG GEOS_VERSION="3.13.1"
 
 FROM debian:${DEBIAN_VERSION}-slim
 
+ARG GEOS_VERSION
+
 RUN bash -c "set -o pipefail && apt-get update \
   && apt-get install -y --no-install-recommends curl ca-certificates wget build-essential cmake \
   && wget https://download.osgeo.org/geos/geos-${GEOS_VERSION}.tar.bz2 \
